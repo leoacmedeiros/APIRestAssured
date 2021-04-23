@@ -17,7 +17,10 @@ public class CircuitoEspecifico {
 	    then().
 	    	assertThat().body("MRData.CircuitTable.season", equalTo("2017")). 
 	    and().
-	    	assertThat().body("MRData.CircuitTable.round", equalTo("2"));	
+	    	assertThat().body("MRData.CircuitTable.round", equalTo("2")).	
+	    and().
+    		assertThat().body("MRData.CircuitTable.Circuits[0].Location.locality", equalTo("Shanghai"));
+	    
 	}
 
 }
